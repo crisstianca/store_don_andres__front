@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const productsApi = axios.create({
-    baseURL: "http://localhost:8000/menu/api/v1/"
+    baseURL: "https://storeandres-backend.onrender.com/menu/api/v1/"
 })
 
 export const createProduct = ( data ) => {
