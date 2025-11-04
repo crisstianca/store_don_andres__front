@@ -30,10 +30,11 @@ export default function HomeMenu() {
         <h1 className='mb-2 text-xl text-center'> Buscar producto </h1>
         <div className='grid grid-cols-4 items-center gap-2'>
           <div className='col-span-2'>
-            <InputText className='w-full' value={''} onChange={() => ''} placeholder="Agrega Serie o nombre del producto" />
+            <InputText className='w-full' value={''} onChange={() => ''} placeholder="Agrega Serie o nombre del producto"  disabled/>
           </div>
           <div className='col-span-1'>
             <button
+              disabled
               className="bg-indigo-500 p-3 rounded-lg w-full flex items-center justify-center hover:bg-indigo-400 hover:cursor-pointer"
             >
               Buscar <FaSearch className='ml-2' />

@@ -85,7 +85,7 @@ export const TableExample = ({ category }) => {
                             value={globalFilterValue}
                             onChange={onGlobalFilterChange}
                             placeholder="Buscar Producto"
-                            className='input_search_table'
+                            className='input_search_table text-base'
                         />
                     </IconField>
                 </div>
@@ -121,11 +121,15 @@ export const TableExample = ({ category }) => {
         const accept = async() => {
             await deleteProduct( rowData.id )
             toast.success('Producto Eliminado', {
-                position: "top-right"
+                position: "bottom-center"
             })
             setTimeout(() => {
-                window.location.reload()
-            }, 1000)
+                navigate('/menu'); // primero navega a la lista general
+                setTimeout(() => {
+                    navigate(`/menu/${params.id}`); // luego vuelve al detalle
+                }, 50);
+            }, 1000);
+
         }
 
          confirmDialog({

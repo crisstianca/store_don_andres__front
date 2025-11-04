@@ -22,25 +22,21 @@ export const ModalFormProduct = ({dataSelected}) => {
         if( params.categoryId ){
             await editProduct( params.categoryId, data )
             toast.success('Producto Actualizado', {
-                position: "top-right"
+                position: "bottom-center"
             })
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000)
+
         } else {
             await createProduct( data )
             toast.success('Producto Agregado', {
-                position: "top-right"
+                position: "bottom-center"
             })
-
+        }
+        setTimeout(() => {
+            navigate('/menu'); // primero navega a la lista general
             setTimeout(() => {
-                navigate('/menu'); // primero navega a la lista general
-                setTimeout(() => {
-                    navigate(`/menu/${params.id}`); // luego vuelve al detalle
-                }, 50);
-            }, 1000);
-
-            }
+                navigate(`/menu/${params.id}`); // luego vuelve al detalle
+            }, 50);
+        }, 1000);
         })
 
     useEffect(() => {
