@@ -32,11 +32,16 @@ export const ModalFormProduct = ({dataSelected}) => {
             toast.success('Producto Agregado', {
                 position: "top-right"
             })
-             setTimeout(() => {
-                navigate(`/${params.id}`); // navega internamente
+
+            setTimeout(() => {
+                navigate('/menu'); // primero navega a la lista general
+                setTimeout(() => {
+                    navigate(`/menu/${params.id}`); // luego vuelve al detalle
+                }, 50);
             }, 1000);
-        }
-    })
+
+            }
+        })
 
     useEffect(() => {
         const loadCategory = () => {

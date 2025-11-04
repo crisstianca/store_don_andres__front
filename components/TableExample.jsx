@@ -203,10 +203,10 @@ export const TableExample = ({ category }) => {
                 >
                     {/* <Column selectionMode="multiple" headerStyle={{ width: '3rem' }} />
                     <Column selectionMode="multiple" headerStyle={{ width: '3rem' }} /> */}
-                    <Column field="name" header="Nombre" sortable style={{ width: '8rem' }} />
-                    <Column field="category" header="Categoría" style={{ width: '8rem' }} />
-                    <Column field="price" header="Precio" style={{ width: '8rem' }} />
-                    <Column field="barcode" header="Codigo de Barra" style={{ width: '8rem' }} />
+                    <Column field="name" header="Nombre" sortable style={{ width: '7rem' }} />
+                    <Column field="category" header="Categoría" style={{ width: '5rem' }} />
+                    <Column field="price" header="Precio" style={{ width: '4rem' }} />
+                    <Column field="barcode" header="Codigo de Barra" style={{ width: '7rem' }} />
                     <Column body={actionBodyTemplate} header="Acciones" style={{ textAlign: 'center', width: 'auto' }}  />
                 </DataTable>
 

@@ -6,13 +6,20 @@ export const Card = ({ producto }) => {
     const navigate = useNavigate()
 
   return (
-    <div 
-        className='bg-blue-400 shadow-lg p-3 hover:bg-blue-500 hover:cursor-pointer rounded-lg flex flex-col items-center justify-center h-20'
-        onClick={ () => {
-            navigate(`/menu/${ producto.value }`)
-        }}
+    <div
+      onClick={() => navigate(`/menu/${producto.value}`)}
+      className="
+        bg-gradient-to-br from-blue-400 to-blue-600 
+        hover:from-blue-500 hover:to-indigo-600
+        transition-all duration-300
+        shadow-md hover:shadow-lg 
+        p-4 rounded-xl 
+        flex flex-col items-center justify-center
+        h-24 cursor-pointer
+        text-white font-semibold text-lg select-none
+      "
     >
-        <h2>{ producto.value }</h2>
+      <h2 className="drop-shadow-sm">{producto.value}</h2>
     </div>
   )
 }
