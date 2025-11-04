@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const productsApi = axios.create({
-    baseURL: "https://storeandres-backend.onrender.com/menu/api/v1/"
+    baseURL: "https://storeandres-backend.onrender.com/menu/api/v1"
 })
 
 export const createProduct = ( data ) => {
@@ -18,7 +18,6 @@ export const getProductByCategory = (category) => {
 }
 
 export const editProduct = ( id, product ) => {
-    console.log('jijij', id, product)
     return productsApi.put(`/products/${id}/`, product)
 }
 

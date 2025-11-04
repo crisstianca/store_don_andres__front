@@ -32,9 +32,9 @@ export const ModalFormProduct = ({dataSelected}) => {
             toast.success('Producto Agregado', {
                 position: "top-right"
             })
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000)
+             setTimeout(() => {
+                navigate(`/${params.id}`); // navega internamente
+            }, 1000);
         }
     })
 

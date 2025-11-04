@@ -17,16 +17,15 @@ export const Navigation = () => {
 
             <div className="sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <a
-                  href="/menu"
+                <Link
+                  to="/menu"
                   aria-current="page"
                   className="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white"
                 >
                   Inicio
-                </a>
+                </Link>
               </div>
             </div>
-          </div>
 
           {/* Notificaciones y usuario */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
